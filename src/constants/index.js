@@ -27,3 +27,21 @@ export const button = [
     name: "Let's Talk",
   },
 ];
+
+export const skills = [
+  {
+    id: "web",
+    title: "Web Design",
+    total: "44+ Design",
+  },
+  {
+    id: "mobile",
+    title: "Mobile Design",
+    total: "55+ Design",
+  },
+  {
+    id: "dashboard",
+    title: "Dashboard",
+    total: "56+ Design",
+  },
+];

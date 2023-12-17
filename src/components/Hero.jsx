@@ -12,7 +12,7 @@ const Hero = () => {
           <span className="text-purple-600">Eniola</span> <br />{" "}
           <span>Product Designer</span>
         </h1>
-        <p className="sm:w-[496px] text-sm sm:text-base sm:text-left text-center text-slate-900 ">
+        <p className="sm:w-[496px] text-sm sm:text-base sm:text-left text-center font-poppins text-slate-900 ">
           Lorem ipsum dolor sit amet consectetur. Lorem tristique at sed
           adipiscing. Volutpat ultricies cursus venenatis curabitur netus. Morbi
           est sem faucibus ut quis adipiscing dolor non. Volutpat sem tempor
