@@ -1,35 +1,36 @@
 import { useState } from "react";
 
 import { navLinks } from "../constants";
-import { menu } from "../assets";
+import { closeIcon, menu } from "../assets";
 import Button from "./button";
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
 
   return (
-    <nav className="navbar w-full flex py-6 justify-between items-center sm:px-40 px-6 xl:max-w-[1040px]">
+    <nav className="w-full flex justify-between  items-center md:px-8 lg:px-40 px-6 py-6">
       <p className="text-4xl">
         <span className="font-bold text-purple-600">E</span>
         <span className="font-poppins">niola</span>
       </p>
 
       {/* Nav Links */}
-      <div className="sm:flex hidden justify-end gap-[146px]">
-        <ul className="flex justify-between items-center gap-[38px]">
-          {navLinks.map((nav) => (
-            <li className="text-base font-poppins cursor-pointer">
-              <a href={`#${nav.id}`}>{nav.title}</a>
-            </li>
-          ))}
-        </ul>
-        <Button />
-      </div>
+
+      <ul className="list-none sm:flex hidden justify-end items-center gap-[38px] flex-1">
+        {navLinks.map((nav) => (
+          <li
+            className={`text-base  font-poppins cursor-pointer
+            }`}
+          >
+            <a href={`#${nav.id}`}>{nav.title}</a>
+          </li>
+        ))}
+      </ul>
 
       {/* Mobile menu button */}
-      <div className="sm:hidden bg-purple-600 px-2 py-2">
+      <div className="sm:hidden  bg-purple-600 px-2 py-2">
         <img
-          src={toggle ? close : menu}
+          src={toggle ? closeIcon : menu}
           alt="menu"
           className="w-[28px] h-[28px] object-contain color-purple "
           onClick={() => setToggle((prev) => !prev)}
